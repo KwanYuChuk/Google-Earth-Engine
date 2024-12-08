@@ -5,7 +5,7 @@ var imageCollection = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
 
 // filter by year and month
 var img = imageCollection.filter(ee.Filter.calendarRange(2015,2024,'year'))
-.filter(ee.Filter.calendarRange(4,111,'month'));
+.filter(ee.Filter.calendarRange(4,11,'month'));
 
 // reduce to mean
 var mean = img.mean();
